@@ -1,0 +1,47 @@
+
+
+###
+GET http://localhost:3003/api/users/
+
+###
+POST http://localhost:3001/api/login/
+Content-Type: application/json
+Authorization: Bearer {token}
+
+{
+  "username": "poppy22",
+  "password": "Cum sa fii faer",
+  "name": "Vann"
+}
+
+###
+GET http://localhost:3003/api/blogs/
+
+###
+GET http://localhost:3001/api/persons/6218ea85a6bfe24c3ffce60a
+
+###
+DELETE http://localhost:3001/api/blogs/62251404a6a778a7abda759f
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InZhbm4xMyIsImlkIjoiNjIyNGYxY2NmOGI5MWY0ZDE5YWMyZWZmIiwiaWF0IjoxNjQ2NTk3MTU2fQ.Rk1nBVx8HsumjjJ5THHSx88C8bJW_XGcOwQSMobpNUc
+
+###
+POST http://localhost:3001/api/blogs/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InZhbm4xMyIsImlkIjoiNjIyNGYxY2NmOGI5MWY0ZDE5YWMyZWZmIiwiaWF0IjoxNjQ2NTk3MTU2fQ.Rk1nBVx8HsumjjJ5THHSx88C8bJW_XGcOwQSMobpNUc
+
+{
+  "author": "Vann",
+  "title": "Cum sa fii faer",
+  "url": "alabalaportocala.com",
+  "likes": 13
+}
+
+
+###
+PUT http://localhost:3001/api/persons/621b508e4c6e10f56f98c170
+Content-Type: application/json
+
+{
+  "name": "Vann very gay",
+  "number": "123-5678900"
+}
