@@ -7,7 +7,8 @@
     "test": "NODE_ENV=test jest --verbose --runInBand --forceExit",
     "start": "NODE_ENV=production node index.js",
     "dev": "NODE_ENV=development nodemon index.js",
-    "start:test": "cross-env NODE_ENV=test node index.js"
+    "start:test": "cross-env NODE_ENV=test node index.js",
+    "build:frontend": "rm -rf UI && cd frontend && npm run build && mv build ../UI"
   },
   "author": "",
   "license": "ISC",
@@ -30,5 +31,9 @@
   },
   "jest": {
     "testEnvironment": "node"
+  },
+  "engines": {
+    "node": "17.6.x",
+    "npm": "8.5.x"
   }
 }
