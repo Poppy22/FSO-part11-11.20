@@ -16,3 +16,7 @@ jobs:
         run: npm run lint
       - name: test
         run: npm run test
+        env:
+          MONGO_URL: ${{secrets.MONGO_URL}}
+          MONGO_URL_TEST: ${{secrets.MONGO_URL_TEST}}
+          SECRET: ${{secrets.SECRET}}
