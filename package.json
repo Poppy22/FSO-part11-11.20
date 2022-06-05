@@ -31,7 +31,11 @@
     "supertest": "^6.2.2"
   },
   "jest": {
-    "testEnvironment": "node"
+    "testEnvironment": "node",
+    "testPathIgnorePatterns": [
+      "UI",
+      "frontend"
+    ]
   },
   "engines": {
     "node": "17.6.x",
