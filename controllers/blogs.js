@@ -45,7 +45,8 @@ blogsRouter.delete('/:id', middleware.protectPath, async (request, response) => 
 
 blogsRouter.put('/:id', middleware.protectPath, async (request, response) => {
   const { id } = request.params
-  const { title, author, url, likes } = request.body
+  const { title, author, url } = request.body
+  let { likes } = request.body
 
   if (title == null && url == null) {
     response.status(400).send()
